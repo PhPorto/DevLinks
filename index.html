@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>PhPorto</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Essa div esta sendo utilizada para guardar todo o conteudo envolvido na caixa-->
     <div id="container">
-        <!--Essa div esta guardando apenas a parte de imagem e @-->
-        <div id="profile">
-            <img 
-                src="./assets/Rudeus.jpg"
-                alt="Imagem do personagem Rudeus do anime Mushoku Tensei"
-            />
-            <p>@PhPorto</p>
-        </div>  
+      <!--Essa div esta guardando apenas a parte de imagem e @-->
+      <div id="profile">
+        <img
+          src="./assets/Rudeus.jpg"
+          alt="Imagem do personagem Rudeus do anime Mushoku Tensei"
+        />
+        <p>@PhPorto</p>
+      </div>
 
-    <!--Essa div esta guardando o botão-->
-        <div id="switch" onclick="ToggleMode()">
-            <button>
-            </button>
-            <span></span>
+      <!--Essa div esta guardando o botão-->
+      <div id="switch" onclick="ToggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+      <div id="sobre">
+        <p>╭──────<3───────╮</p>
+
+        <p>⾕・dev student</p>
+
+        <div id="idade">
+          <p>⾕・19y</p>
         </div>
 
-        <div id="sobre">
-          <p>╭──────<3───────╮</p>
-          
-          <p>⾕・dev student</p>
-
-          <div id="idade">
-            <p>⾕・18y</p>
-          </div>
-
-          <div id="cidade">
-            <p style="word-spacing: 19px;">⾕・SP</p>
-          </div>
-
-          <p>╰──────<3───────╯</p>
+        <div id="cidade">
+          <p style="word-spacing: 19px">⾕・SP</p>
         </div>
 
-        <!--Aqui inicia a lista de links a parte-->
-        <ul>
-          <li>
-            <a href="https://github.com/PhPorto" target="_blank">Ver meu portifolio</a>
-          </li>
+        <p>╰──────<3───────╯</p>
+      </div>
 
-          <li>
-            <a href="https://discord.gg/5VX2STEC" target="_blank">Meu servidor do discord</a>
-          </li>
+      <!--Aqui inicia a lista de links a parte-->
+      <ul>
+        <li>
+          <a href="https://github.com/PhPorto" target="_blank"
+            >Ver meu portifolio</a
+          >
+        </li>
 
-          <li>
-            <a href="https://livepix.gg/ophporto" target="_blank">LivePix</a>
-          </li>
+        <li>
+          <a href="https://discord.gg/5VX2STEC" target="_blank"
+            >Meu servidor do discord</a
+          >
+        </li>
 
-          <li>
-            <a href="https://open.spotify.com/playlist/7loRkJ19TKwTrgCdXsCzJT?si=378f0f468d294f4e" target="_blank">Playlist</a>
-          </li>
-        </ul>
+        <li>
+          <a href="https://livepix.gg/ophporto" target="_blank">LivePix</a>
+        </li>
 
-        <!--Aqui inicia os links de redes sociais-->
-        <div id="social-links">
-            <a href="https://www.twitch.tv/ophporto" target="_blank">
-                <ion-icon name="logo-twitch"></ion-icon>
-            </a>
+        <li>
+          <a
+            href="https://open.spotify.com/playlist/7loRkJ19TKwTrgCdXsCzJT?si=378f0f468d294f4e"
+            target="_blank"
+            >Playlist</a
+          >
+        </li>
+      </ul>
+
+      <!--Aqui inicia os links de redes sociais-->
+      <div id="social-links">
+        <a href="https://www.twitch.tv/ophporto" target="_blank">
+          <ion-icon name="logo-twitch"></ion-icon>
+        </a>
 
         <a href="https://instagram.com/ophporto" target="_blank">
           <ion-icon name="logo-instagram"></ion-icon>
@@ -80,19 +87,29 @@
           <ion-icon name="logo-youtube"></ion-icon>
         </a>
 
-        <a href="https://www.linkedin.com/in/pedro-henrique-abreu-porto-a35446340/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/pedro-henrique-abreu-porto-a35446340/"
+          target="_blank"
+        >
           <ion-icon name="logo-linkedin"></ion-icon>
         </a>
       </div>
 
       <footer>
-        Feito com ♥ pelo <a href="https://github.com/PhPorto" target="_blank">PhPorto</a>
+        Feito com ♥ pelo
+        <a href="https://github.com/PhPorto" target="_blank">PhPorto</a>
       </footer>
     </div>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <script src="./script.js"></script>
   </body>
 </html>
