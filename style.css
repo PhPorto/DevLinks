@@ -1,107 +1,208 @@
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= FUNDO GLOBAL ================= */
+/* ======================= */
+/* VARIÁVEIS */
+/* ======================= */
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.08);
+  --surface-color-hover: rgba(255, 255, 255, 0.15);
+  --highlight-color: rgba(255, 255, 255, 0.25);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.4);
+  --surface-color: rgba(0, 0, 0, 0.08);
+  --surface-color-hover: rgba(0, 0, 0, 0.15);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+/* ======================= */
+/* BASE */
+/* ======================= */
+
 html {
-  height: 100%;
-  background-color: #000000; /* evita branco no overscroll */
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
-  min-height: 100dvh; /* corrige bug de altura no iPhone */
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+
+  background-image: var(--bg-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-  overscroll-behavior: none;
+
+  transition: background 0.4s ease-in-out;
 }
 
-/* ================= CONTAINER ================= */
-.container {
+#container {
   width: 100%;
-  max-width: 420px;
-  padding: 20px;
+  max-width: 500px;
+  padding: 24px;
+}
+
+/* ======================= */
+/* PROFILE */
+/* ======================= */
+
+#profile {
   text-align: center;
-}
-
-/* ================= CARD PERFIL ================= */
-.profile-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 25px;
   margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
 }
 
-.profile-card h1 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.profile-card p {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* ================= BOTÕES ================= */
-.link-button {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-  font-weight: bold;
-  color: #1e5eff;
-  background: rgba(255, 255, 255, 0.03);
-  transition: all 0.3s ease;
-}
-
-.link-button:hover {
-  background: rgba(30, 94, 255, 0.2);
-  transform: scale(1.03);
-}
-
-/* ================= ICONES SOCIAIS ================= */
-.social-icons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.social-icons a {
-  color: #1e5eff;
-  font-size: 22px;
+#profile img {
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  box-shadow: 0 0 15px var(--text-color);
   transition: 0.3s;
 }
 
-.social-icons a:hover {
-  transform: scale(1.2);
+#profile p {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 12px;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  margin-top: 30px;
-  font-size: 13px;
-  color: #ffffff;
-  opacity: 0.7;
+/* ======================= */
+/* SWITCH */
+/* ======================= */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 20px auto;
 }
 
-footer a {
-  color: #1e5eff;
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.light #switch button {
+  left: 50%;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+}
+
+/* ======================= */
+/* SOBRE */
+/* ======================= */
+
+#sobre {
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ======================= */
+/* LINKS */
+/* ======================= */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
   text-decoration: none;
+  font-weight: 500;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+
+  transition: 0.3s;
 }
 
-footer a:hover {
-  text-decoration: underline;
+ul li a:hover {
+  background: var(--surface-color-hover);
+  transform: scale(1.03);
+}
+
+/* ======================= */
+/* SOCIAL */
+/* ======================= */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  font-size: 22px;
+}
+
+#social-links a {
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+/* ======================= */
+/* FOOTER */
+/* ======================= */
+
+footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  opacity: 0.8;
 }
